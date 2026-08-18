@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LoanCraft AI | Loan Decision Engine</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo-section">
+
+            <div class="logo-icon">
+                ₿
+            </div>
+
+            <div>
+                <h2>LoanCraft AI</h2>
+                <span>Loan Decision Engine</span>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="#dashboard" class="active">
+                Dashboard
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#how-it-works">
+                How It Works
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="dashboard">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                MACHINE LEARNING POWERED
+            </span>
+
+            <h1>
+                Automated Financial
+                <span>Credit & Loan</span>
+                Decision Engine
+            </h1>
+
+            <p>
+                Evaluate applicant information and generate
+                an intelligent credit-risk assessment using
+                machine learning.
+            </p>
+
+        </div>
+
+
+        <div class="hero-stat">
+
+            <div class="stat-icon">
+                AI
+            </div>
+
+            <div>
+                <strong>Credit Risk AI</strong>
+                <small>Decision Support System</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-container">
+
+
+        <!-- ================= LEFT COLUMN ================= -->
+
+        <div class="left-column">
+
+
+            <!-- APPLICANT INFORMATION -->
+
+            <section class="card">
+
+                <div class="card-header">
+
+                    <div class="section-icon">
+                        👤
+                    </div>
+
+                    <div>
+                        <h2>Applicant Information</h2>
+
+                        <p>
+                            Enter the applicant's personal details
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <!-- AGE -->
+
+                    <div class="form-group">
+
+                        <label for="age">
+                            Age
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>⌁</span>
+
+                            <input type="number" id="age" placeholder="e.g. 30" min="18" max="100" required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SEX -->
+
+                    <div class="form-group">
+
+                        <label for="sex">
+                            Sex
+                        </label>
+
+                        <select id="sex">
+
+                            <option value="">
+                                Select gender
+                            </option>
+
+                            <option value="male">
+                                Male
+                            </option>
+
+                            <option value="female">
+                                Female
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- JOB -->
+
+                    <div class="form-group">
+
+                        <label for="job">
+                            Job Category
+                        </label>
+
+                        <select id="job">
+
+                            <option value="">
+                                Select job category
+                            </option>
+
+                            <option value="0">
+                                0 - Unskilled / Non-Resident
+                            </option>
+
+                            <option value="1">
+                                1 - Unskilled / Resident
+                            </option>
+
+                            <option value="2">
+                                2 - Skilled
+                            </option>
+
+                            <option value="3">
+                                3 - Highly Skilled
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- HOUSING -->
+
+                    <div class="form-group">
+
+                        <label for="housing">
+                            Housing
+                        </label>
+
+                        <select id="housing">
+
+                            <option value="">
+                                Select housing
+                            </option>
+
+                            <option value="own">
+                                Own
+                            </option>
+
+                            <option value="rent">
+                                Rent
+                            </option>
+
+                            <option value="free">
+                                Free
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= FINANCIAL INFORMATION ================= -->
+
+            <section class="card">
+
+                <div class="card-header">
+
+                    <div class="section-icon green">
+                        $
+                    </div>
+
+                    <div>
+
+                        <h2>Financial Information</h2>
+
+                        <p>
+                            Enter the applicant's financial details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <!-- SAVINGS -->
+
+                    <div class="form-group">
+
+                        <label for="saving">
+                            Saving Account
+                        </label>
+
+                        <select id="saving">
+
+                            <option value="">
+                                Select savings level
+                            </option>
+
+                            <option value="little">
+                                Little
+                            </option>
+
+                            <option value="moderate">
+                                Moderate
+                            </option>
+
+                            <option value="quite rich">
+                                Quite Rich
+                            </option>
+
+                            <option value="rich">
+                                Rich
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- CHECKING -->
+
+                    <div class="form-group">
+
+                        <label for="checking">
+                            Checking Account
+                        </label>
+
+                        <select id="checking">
+
+                            <option value="">
+                                Select checking account
+                            </option>
+
+                            <option value="little">
+                                Little
+                            </option>
+
+                            <option value="moderate">
+                                Moderate
+                            </option>
+
+                            <option value="rich">
+                                Rich
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- CREDIT -->
+
+                    <div class="form-group">
+
+                        <label for="credit">
+                            Credit Amount (DM)
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>DM</span>
+
+                            <input type="number" id="credit" placeholder="e.g. 5000" min="0">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DURATION -->
+
+                    <div class="form-group">
+
+                        <label for="duration">
+                            Loan Duration
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>⌛</span>
+
+                            <input type="number" id="duration" placeholder="Months" min="1">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= LOAN PURPOSE ================= -->
+
+            <section class="card">
+
+                <div class="card-header">
+
+                    <div class="section-icon purple">
+                        ▣
+                    </div>
+
+                    <div>
+
+                        <h2>Loan Information</h2>
+
+                        <p>
+                            Specify the purpose of the loan
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="purpose">
+                        Loan Purpose
+                    </label>
+
+                    <select id="purpose">
+
+                        <option value="">
+                            Select loan purpose
+                        </option>
+
+                        <option value="car">
+                            🚗 Car
+                        </option>
+
+                        <option value="furniture/equipment">
+                            🪑 Furniture / Equipment
+                        </option>
+
+                        <option value="radio/TV">
+                            📺 Radio / TV
+                        </option>
+
+                        <option value="domestic appliances">
+                            🏠 Domestic Appliances
+                        </option>
+
+                        <option value="repairs">
+                            🔧 Repairs
+                        </option>
+
+                        <option value="education">
+                            🎓 Education
+                        </option>
+
+                        <option value="business">
+                            💼 Business
+                        </option>
+
+                        <option value="vacation/others">
+                            ✈️ Vacation / Others
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="button-group">
+
+                    <button type="button" class="reset-btn" id="resetBtn">
+
+                        Reset
+
+                    </button>
+
+
+                    <button type="button" class="predict-btn" id="predictBtn">
+
+                        <span>✦</span>
+
+                        Predict Credit Risk
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- ================= RIGHT COLUMN ================= -->
+
+        <aside class="right-column">
+
+
+            <!-- ================= RESULT CARD ================= -->
+
+            <section class="result-card" id="resultCard">
+
+                <div class="result-header">
+
+                    <div>
+
+                        <span class="result-label">
+                            PREDICTION RESULT
+                        </span>
+
+                        <h2 id="resultTitle">
+                            Awaiting Assessment
+                        </h2>
+
+                    </div>
+
+                    <div class="result-status" id="statusIcon">
+
+                        AI
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SCORE -->
+
+                <div class="score-container">
+
+                    <div class="score-circle">
+
+                        <div>
+
+                            <strong id="score">
+                                --
+                            </strong>
+
+                            <span>
+                                Risk Score
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="result-message">
+
+                    <p id="resultMessage">
+
+                        Enter applicant information and
+                        click "Predict Credit Risk" to
+                        generate an assessment.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- RESULT DETAILS -->
+
+                <div class="result-details">
+
+                    <div class="detail-item">
+
+                        <span>
+                            Model
+                        </span>
+
+                        <strong id="modelName">
+                            ML Model
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Status
+                        </span>
+
+                        <strong id="riskStatus">
+                            Waiting
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= QUICK INFO ================= -->
+
+            <section class="info-card">
+
+                <h3>
+                    How the assessment works
+                </h3>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Enter Information
+                        </strong>
+
+                        <p>
+                            Provide applicant and loan details.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            AI Analysis
+                        </strong>
+
+                        <p>
+                            The model analyzes the submitted
+                            characteristics.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Risk Prediction
+                        </strong>
+
+                        <p>
+                            The system provides a predicted
+                            credit-risk category.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </aside>
+
+    </main>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-content">
+
+            <span class="badge">
+                ABOUT THE PROJECT
+            </span>
+
+            <h2>
+                Machine Learning for
+                Credit Risk Assessment
+            </h2>
+
+            <p>
+                CreditAI is an academic prototype designed
+                to demonstrate how Machine Learning can be
+                applied to financial credit-risk classification.
+                The system uses applicant characteristics
+                such as financial information, loan amount,
+                loan duration, and loan purpose.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+
+            <strong>
+                CreditAI
+            </strong>
+
+            <span>
+                Automated Financial Credit & Loan Decision Engine
+            </span>
+
+        </div>
+
+
+        <p>
+            Academic Prototype • AIML Project • 2026
+        </p>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+
+</html>
